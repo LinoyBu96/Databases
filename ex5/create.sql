@@ -5,5 +5,5 @@ CREATE TABLE bestsellers (
     Reviews integer,
     Price integer,
     Year integer,
-    Genre varchar -- forum: without check
+    Genre varchar
 )

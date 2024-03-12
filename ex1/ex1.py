@@ -76,7 +76,6 @@ def process_file():
             null_atts_university = []
             prev_university = []
             prev_closed_university = ''
-            # years = set()
             countries = set()
 
             is_header = True
@@ -88,12 +87,7 @@ def process_file():
                     enrollment_outwriters[ESTIMATED_IN].writerow([row[ATTRIBUTE_INDEX[att]] for att in ESTIMATED_IN_ATTRIBUTES])
                     is_header = False
                     continue
-                # TO DO splits row into the different csv table files
                 prev_university, null_atts_university = update_university(row, prev_university, null_atts_university)
-                # cur_year = row[ATTRIBUTE_INDEX['year']]
-                # if cur_year not in years:
-                #     enrollment_outwriters[YEAR].writerow([cur_year])
-                #     years.add(cur_year)
                 cur_countrycode = row[ATTRIBUTE_INDEX['countrycode']]
                 if cur_countrycode not in countries:
                     enrollment_outwriters[COUNTRY].writerow([row[ATTRIBUTE_INDEX[att]] for att in COUNTRY_ATTRIBUTES])

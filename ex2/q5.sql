@@ -6,10 +6,3 @@ WHERE birthPlace = 'Jerusalem' and 1 = (
     WHERE A.uid = B.uid
     )
 ORDER BY name;
-
--- SELECT DISTINCT name
--- FROM members NATURAL JOIN memberInKnesset
--- WHERE birthPlace = 'Jerusalem'
--- GROUP BY uid
--- HAVING count(number) = 1
--- ORDER BY name;

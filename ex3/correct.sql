@@ -6,7 +6,6 @@ HAVING COUNT(DISTINCT d1.cause) = (
   select count(distinct A.cause)
   from donors A
   where A.name=d1.name)
-  -- means there are no cause for n1 that is not shared with n2
   and COUNT(DISTINCT d2.cause) = (
     select count(distinct A.cause)
     from donors A
